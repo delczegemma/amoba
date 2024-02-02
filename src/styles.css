@@ -8,19 +8,19 @@ h1 {
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 300px;
-  margin: 20px auto;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 420px;
+  margin: 10px auto;
 }
 
 .cell {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Finger Paint', sans-serif;
-  font-size: 105px;
+  font-size: 75px;
   border: 1px solid #ccc;
   cursor: pointer;
 }
@@ -28,15 +28,18 @@ h1 {
 /*a szélek eltüntetése: csak három táblára jó megoldás*/
 .cell:first-child,
 .cell:nth-child(2),
-.cell:nth-child(3) {
+.cell:nth-child(3),
+.cell:nth-child(4),
+.cell:nth-child(5),
+.cell:nth-child(6) {
   border-top: none;
 }
 
-.cell:nth-child(3n+1) {
+.cell:nth-child(6n+1) {
   border-left: none;
 }
 
-.cell:nth-child(3n+3) {
+.cell:nth-child(6n+6) {
   border-right: none;
 }
 
@@ -45,8 +48,11 @@ h1 {
 }
 
 .cell:last-child,
-.cell:nth-child(8),
-.cell:nth-child(7) {
+.cell:nth-child(35),
+.cell:nth-child(34),
+.cell:nth-child(33),
+.cell:nth-child(32),
+.cell:nth-child(31){
   border-bottom: none;
 }
  /*hover content következő lépést lépést*/

@@ -41,7 +41,7 @@ function makeMove() {
 
   //A táblán lévő cellára filled classt rak
   //CheckWin
-  if (checkWin(board, row, col, 3 )){
+  if (checkWin(board, row, col, 4 )){
     running = false;
     message.textContent = `Az ${player} játékos nyert! Gratulálunk!`
   }
