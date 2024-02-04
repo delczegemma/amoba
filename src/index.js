@@ -113,6 +113,35 @@ function checkDirection(
   return difference - 1;
 }
 
+function getWinningCells(board, row, column, PlayerSymbol, rowC1, rowC2, colC1, colC2) {
+  const winningCells = [];
+  let x = row;
+  let y = column;
+  const withinBorders = (x, y) => x >= 0 && y >= 0 && x < board.length && y < board[0].length;
+  do {
+    winningCells.push({x, y});
+    x += rowC1;
+    y += colC1
+  } while (withinBorders(x, y) && board[x][y] === PlayerSymbol)
+  x= row + rowC2;
+  y= column + colC2;
+  while(withinBorders(x, y) && board[x][y] === PlayerSymbol){
+    winningCells.push({x, y});
+    x += rowC2;
+    y += colC2
+  }
+  //tesztelés: a kapott tömb mindig a winninglength-el megegyező hosszúságú kell legyen
+  console.log("A győztes tömb: ")
+  console.log(winningCells);
+  return winningCells;
+}
+
+function highlightWinLine(coordinates){
+  coordinates.forEach(({ x, y }) => {
+    const cell = document.querySelector(`.cell[cellIndexX="${x}"][cellIndexY="${y}"]`);
+    cell.classList.add('winner-cell');
+  });
+}
 function checkWin(board, row, column, winningLength) {
   const PlayerSymbol = board[row][column];
 
@@ -134,16 +163,32 @@ function checkWin(board, row, column, winningLength) {
     1;
   console.log(`Checkwin függvény 
       sora: ${rowLength},oszlopa: ${columnLength},főátló: ${mDiagonalLength},ellenátló: ${oppDiagonalLength} `)
-  return (
-    rowLength >= winningLength ||
-    columnLength >= winningLength ||
-    mDiagonalLength >= winningLength ||
-    oppDiagonalLength >= winningLength
-  );
+
+  let winningCoordinates = [];
+  switch (true){
+    case (rowLength >= winningLength):
+      winningCoordinates = getWinningCells(board, row, column, PlayerSymbol, 0, 0, 1, -1);
+      highlightWinLine(winningCoordinates);
+      return true;
+    case (columnLength >= winningLength):
+      winningCoordinates = getWinningCells(board, row, column, PlayerSymbol, 1, -1, 0, 0);
+      highlightWinLine(winningCoordinates);
+      return true;
+    case (mDiagonalLength >= winningLength):
+      winningCoordinates = getWinningCells(board, row, column, PlayerSymbol, 1, -1, 1, -1);
+      highlightWinLine(winningCoordinates);
+      return true;
+    case (oppDiagonalLength >= winningLength):
+      winningCoordinates = getWinningCells(board, row, column, PlayerSymbol, 1, -1, -1, 1);
+      highlightWinLine(winningCoordinates);
+      return true;
+    default:
+      return false;
+  }
 }
 
 
-console.log(checkWin(board, 2,3, 4));
+//console.log(checkWin(board, 2,3, 4));
 
 
 function checkDraw(board) {
