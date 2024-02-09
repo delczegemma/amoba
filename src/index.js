@@ -6,7 +6,6 @@ let player = "X";
 
 let board = initBoard();
 
-let running = false;
 
 function initBoard(){
   let boardSize = Math.sqrt(cells.length);
@@ -23,11 +22,10 @@ function initGame(){
     }
   )
   restartBtn.addEventListener('click', restartGame);
-  running = true;
 }
 
 function makeMove() {
-  if (this.classList.contains('filled') || !running) {
+  if (this.classList.contains('filled')) {
     // ha már van itt lépés, ne tegyen semmit
     return;
   }
@@ -42,12 +40,12 @@ function makeMove() {
   //A táblán lévő cellára filled classt rak
   //CheckWin
   if (checkWin(board, row, col, 4 )){
-    running = false;
+    gameOver();
     message.textContent = `Az ${player} játékos nyert! Gratulálunk!`
   }
   //CheckDraw
   else if (checkDraw(board)){
-    running = false;
+    gameOver();
     message.textContent = `A játék véget ért. Az eredmény döntetlen. Újra?`
   } else {
     //játékosváltás
@@ -69,10 +67,17 @@ function switchPlayer() {
   player = player === "X" ? "O" : "X";
 }
 
+function gameOver() {
+  cells.forEach(cell => {
+    if (!cell.classList.contains('filled')) {
+      cell.classList.add('filled')
+    }
+  })
+}
+
 function restartGame() {
   board = initBoard();
   player = "X";
-  running = true;
   message.textContent = "";
   cells.forEach(cell => {
     cell.classList.remove('filled')
