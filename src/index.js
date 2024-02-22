@@ -39,7 +39,10 @@ function makeMove() {
 
   //A táblán lévő cellára filled classt rak
   //CheckWin
-  if (checkWin(board, row, col, 4 )){
+  const winDirections= checkWin(board, row, col, 4 )
+  if (winDirections){
+    const winningCoordinates =getWinningCells(board, row, col, player, ...winDirections);
+    highlightWinLine(winningCoordinates)
     gameOver();
     message.textContent = `Az ${player} játékos nyert! Gratulálunk!`
   }
@@ -172,23 +175,15 @@ function checkWin(board, row, column, winningLength) {
   let winningCoordinates = [];
   switch (true){
     case (rowLength >= winningLength):
-      winningCoordinates = getWinningCells(board, row, column, PlayerSymbol, 0, 0, 1, -1);
-      highlightWinLine(winningCoordinates);
-      return true;
+      return [0, 0, 1, -1]
     case (columnLength >= winningLength):
-      winningCoordinates = getWinningCells(board, row, column, PlayerSymbol, 1, -1, 0, 0);
-      highlightWinLine(winningCoordinates);
-      return true;
+      return [1, -1, 0, 0]
     case (mDiagonalLength >= winningLength):
-      winningCoordinates = getWinningCells(board, row, column, PlayerSymbol, 1, -1, 1, -1);
-      highlightWinLine(winningCoordinates);
-      return true;
+      return [1, -1, 1 ,-1]
     case (oppDiagonalLength >= winningLength):
-      winningCoordinates = getWinningCells(board, row, column, PlayerSymbol, 1, -1, -1, 1);
-      highlightWinLine(winningCoordinates);
-      return true;
+      return [1, -1, -1, 1]
     default:
-      return false;
+      return null;
   }
 }
 
