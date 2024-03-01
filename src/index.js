@@ -76,6 +76,7 @@ class Game {
     this.message.textContent = "";
     this.cells.forEach(cell => {
       cell.classList.remove('filled')
+      cell.classList.remove('winner-cell');
       cell.textContent = ""
     })
   }
