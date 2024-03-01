@@ -3,12 +3,11 @@ class Game {
     this.cells = cells
     this.message = message
     this.restartBtn = restartBtn
-    this.player = "X";
-    this.board = this.initBoard();
+    this.restartGame("X",this.cells.length);
     this.initGame();
   }
-  initBoard(){
-    let boardSize = Math.sqrt(this.cells.length);
+  initBoard(cellLength){ //flexibilis initBoard
+    let boardSize = Math.sqrt(cellLength);
     return Array(boardSize).fill().map(() =>
         Array(boardSize).fill(""));
   }
@@ -16,7 +15,7 @@ class Game {
     this.cells.forEach((cell) => {
       cell.addEventListener("click", this.makeMove.bind(this));
     });
-    this.restartBtn.addEventListener("click", this.restartGame.bind(this));
+    this.restartBtn.addEventListener("click", () => {this.restartGame("X",this.cells.length)}).bind(this);
   }
   makeMove(event) {
     const cell = event.target;
@@ -70,9 +69,10 @@ class Game {
       }
     })
   }
-  restartGame() {
-    this.board = this.initBoard();
-    this.player = "X";
+  restartGame(player, cellsLength) {
+    this.board = this.initBoard(cellsLength);
+    this.player = player;
+    //esetleg if ide
     this.message.textContent = "";
     this.cells.forEach(cell => {
       cell.classList.remove('filled')
