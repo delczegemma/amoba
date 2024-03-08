@@ -31,10 +31,7 @@
     </div>
   </div>
 
-    <div id="app">
-      <div class="infobox">
-        <p>A nyerő sor hossza: <span id="winningLengthInfo"></span></p>
-      </div>
+    <div id="app" class="flex-container">
       <div id="board" class="board">
         <div class="cell" cellIndexX="0" cellIndexY="0" ></div>
         <div class="cell" cellIndexX="0" cellIndexY="1" ></div>
@@ -73,8 +70,13 @@
         <div class="cell" cellIndexX="5" cellIndexY="4" ></div>
         <div class="cell" cellIndexX="5" cellIndexY="5" ></div>
       </div>
-      <h2 id="reportMessage"></h2>
-      <button id="restartBtn">Új játék</button>
+      <div class="info-section">
+        <div class="infobox">
+          <p>A nyerő sor hossza: <span id="winningLengthInfo"></span></p>
+        </div>
+        <h2 id="reportMessage"></h2>
+        <button id="restartBtn">Új játék</button>
+      </div>
     </div>
 
     <script src="src/index.js"></script>

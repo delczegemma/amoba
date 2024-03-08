@@ -9,6 +9,16 @@ h1 {
   display: none;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-section {
+  margin-left: 20px; /* Táblától való eltolás */
+  flex-grow: 1;
+}
+
 .infobox {
   text-align: center;
   position: relative;
@@ -20,6 +30,7 @@ h1 {
   grid-template-columns: repeat(6, 1fr);
   max-width: 420px;
   margin: 10px auto;
+  flex-grow: 1;
 }
 
 .cell {

@@ -49,13 +49,9 @@ class Game {
       this.gameOver();
       this.message.textContent = `A játék véget ért. Az eredmény döntetlen. Újra?`
     } else {
+
       //játékosváltás
       this.switchPlayer();
-
-      //hover helyzet váltása
-      this.cells.forEach(cell => {
-        cell.dataset.nextMove = this.player;
-      });
     }
   }
   placeStepOnBoard(cell, row, col) {
@@ -65,6 +61,11 @@ class Game {
   }
   switchPlayer() {
     this.player = this.player === "X" ? "O" : "X";
+
+    //hover helyzet váltása
+    this.cells.forEach(cell => {
+      cell.dataset.nextMove = this.player;
+    });
   }
   gameOver() {
     this.cells.forEach(cell => {
@@ -212,7 +213,6 @@ form.addEventListener("submit", function(event) {
 
   // Játék inicializálása a beküldött adatok alapján
   const game = new Game(cells, message, restartBtn, firstPlayer, winningLength, boardSize);
-  game.initGame();
 
 
   // Modal bezárása
