@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="refactor: az inicializás funciójának csökkentése restartGame többszöri felhasználásával.&#10;&#10;InitBoard és restartGame függvények paraméterezésével felxibilisebbé vált a program, bármikor indítható kívülről megadott játékoskezdéssel és táblamérettel.">
+    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="feat: Modal beépítése a jáékba.&#10;&#10;A nyerő hosszat és a kezdő játékost ezentúl a játékos állíthatja be. Kezőlapként a beállítások tűnnek fel, majd az adatok bekérése után eltűnik a modal és a játéktér jelenik meg.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
@@ -94,7 +94,8 @@
       <workItem from="1708608047675" duration="3583000" />
       <workItem from="1708870206725" duration="5326000" />
       <workItem from="1709297769309" duration="7977000" />
-      <workItem from="1709677904950" duration="11524000" />
+      <workItem from="1709677904950" duration="12331000" />
+      <workItem from="1709903087516" duration="1959000" />
     </task>
     <task id="LOCAL-00001" summary="hat táblás verzió">
       <option name="closed" value="true" />
@@ -144,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709306657302</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: Modal beépítése a jáékba.&#10;&#10;A nyerő hosszat és a kezdő játékost ezentúl a játékos állíthatja be. Kezőlapként a beállítások tűnnek fel, majd az adatok bekérése után eltűnik a modal és a játéktér jelenik meg.">
+      <option name="closed" value="true" />
+      <created>1709863429757</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709863429757</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +177,7 @@
     <MESSAGE value="refactor: A játék osztályba szervezése&#10;&#10;Az egész játékhoz tartozó függvényeket osztályba szerveztem az objektum orientáltság elérése és a könnyebb továbbfejleszthetőség érdekében. Board mivel a class scope-ján belül elérhető, kikerült a függvények argumentiumai közül." />
     <MESSAGE value="fix: A piros kijelölés leszedése az új játék lehetséges elemeiről." />
     <MESSAGE value="refactor: az inicializás funciójának csökkentése restartGame többszöri felhasználásával.&#10;&#10;InitBoard és restartGame függvények paraméterezésével felxibilisebbé vált a program, bármikor indítható kívülről megadott játékoskezdéssel és táblamérettel." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: az inicializás funciójának csökkentése restartGame többszöri felhasználásával.&#10;&#10;InitBoard és restartGame függvények paraméterezésével felxibilisebbé vált a program, bármikor indítható kívülről megadott játékoskezdéssel és táblamérettel." />
+    <MESSAGE value="feat: Modal beépítése a jáékba.&#10;&#10;A nyerő hosszat és a kezdő játékost ezentúl a játékos állíthatja be. Kezőlapként a beállítások tűnnek fel, majd az adatok bekérése után eltűnik a modal és a játéktér jelenik meg." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Modal beépítése a jáékba.&#10;&#10;A nyerő hosszat és a kezdő játékost ezentúl a játékos állíthatja be. Kezőlapként a beállítások tűnnek fel, majd az adatok bekérése után eltűnik a modal és a játéktér jelenik meg." />
   </component>
 </project>

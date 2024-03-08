@@ -218,6 +218,7 @@ form.addEventListener("submit", function(event) {
   // Modal bezárása
   closeModal();
   document.querySelector("#app").style.display = 'inline';
+  document.querySelector("#winningLengthInfo").innerText = winningLength;
 });
 
 //beállításolal mutatása

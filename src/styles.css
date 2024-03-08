@@ -9,6 +9,12 @@ h1 {
   display: none;
 }
 
+.infobox {
+  text-align: center;
+  position: relative;
+  right: -160px
+}
+
 .board {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
