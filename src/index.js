@@ -1,9 +1,12 @@
 class Game {
-  constructor(cells, message, restartBtn) {
+  constructor(cells, message, restartBtn, firstPlayer, winningLength, boardSize ) {
     this.cells = cells
     this.message = message
     this.restartBtn = restartBtn
-    this.restartGame("X",this.cells.length);
+    this.firstPlayer = firstPlayer
+    this.winningLength = winningLength
+    this.boardSize = boardSize
+    this.restartGame(this.firstPlayer,this.cells.length);
     this.initGame();
   }
   initBoard(cellLength){ //flexibilis initBoard
@@ -13,9 +16,10 @@ class Game {
   }
   initGame() {
     this.cells.forEach((cell) => {
-      cell.addEventListener("click", this.makeMove.bind(this));
+      cell.dataset.nextMove = this.player;
+      cell.addEventListener("click", () => this.makeMove(event));
     });
-    this.restartBtn.addEventListener("click", () => {this.restartGame("X",this.cells.length)}).bind(this);
+    this.restartBtn.addEventListener("click", () => this.restartGame(this.firstPlayer,this.cells.length));
   }
   makeMove(event) {
     const cell = event.target;
@@ -33,7 +37,7 @@ class Game {
 
     //A táblán lévő cellára filled classt rak
     //CheckWin
-    const winDirections= this.checkWin(row, col, 4 )
+    const winDirections= this.checkWin(row, col, this.winningLength )
     if (winDirections){
       const winningCoordinates = this.getWinningCells(row, col, this.player, ...winDirections);
       this.highlightWinLine(winningCoordinates)
@@ -190,5 +194,38 @@ class Game {
 const cells = document.querySelectorAll(".cell");
 const message = document.querySelector("#reportMessage");
 const restartBtn = document.querySelector("#restartBtn");
-const game = new Game(cells, message, restartBtn);
-game.initGame()
+
+
+
+
+//Játék beállítása
+const MODAL = document.getElementById('myModal');
+const form = document.getElementById("gameSettingsForm");
+form.addEventListener("submit", function(event) {
+  // Űrlap elküldésének megakadályozása
+  event.preventDefault();
+
+  // Beküldött adatok gyűjtése
+  const firstPlayer = document.getElementById("firstPlayer").value;
+  const winningLength = parseInt(document.getElementById("winningLength").value);
+  const boardSize = parseInt(document.getElementById("boardSize").value);
+
+  // Játék inicializálása a beküldött adatok alapján
+  const game = new Game(cells, message, restartBtn, firstPlayer, winningLength, boardSize);
+  game.initGame();
+
+
+  // Modal bezárása
+  closeModal();
+  document.querySelector("#app").style.display = 'inline';
+});
+
+//beállításolal mutatása
+function setGame() {
+  MODAL.style.display = 'block';
+}
+
+// Modal bezárása
+function closeModal() {
+  MODAL.style.display = 'none';
+}

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="fix: A piros kijelölés leszedése az új játék lehetséges elemeiről.">
+    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="refactor: az inicializás funciójának csökkentése restartGame többszöri felhasználásával.&#10;&#10;InitBoard és restartGame függvények paraméterezésével felxibilisebbé vált a program, bármikor indítható kívülről megadott játékoskezdéssel és táblamérettel.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,8 @@
       <workItem from="1708469578173" duration="705000" />
       <workItem from="1708608047675" duration="3583000" />
       <workItem from="1708870206725" duration="5326000" />
-      <workItem from="1709297769309" duration="7339000" />
+      <workItem from="1709297769309" duration="7977000" />
+      <workItem from="1709677904950" duration="11524000" />
     </task>
     <task id="LOCAL-00001" summary="hat táblás verzió">
       <option name="closed" value="true" />
@@ -133,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709299094986</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor: az inicializás funciójának csökkentése restartGame többszöri felhasználásával.&#10;&#10;InitBoard és restartGame függvények paraméterezésével felxibilisebbé vált a program, bármikor indítható kívülről megadott játékoskezdéssel és táblamérettel.">
+      <option name="closed" value="true" />
+      <created>1709306657302</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709306657302</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +167,7 @@
     <MESSAGE value="refactor: A getWinningCells átszervezése a futtatófügggvénybe.&#10;&#10;Így a CheckWin nem töri meg az egységbe zártság logikáját." />
     <MESSAGE value="refactor: A játék osztályba szervezése&#10;&#10;Az egész játékhoz tartozó függvényeket osztályba szerveztem az objektum orientáltság elérése és a könnyebb továbbfejleszthetőség érdekében. Board mivel a class scope-ján belül elérhető, kikerült a függvények argumentiumai közül." />
     <MESSAGE value="fix: A piros kijelölés leszedése az új játék lehetséges elemeiről." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: A piros kijelölés leszedése az új játék lehetséges elemeiről." />
+    <MESSAGE value="refactor: az inicializás funciójának csökkentése restartGame többszöri felhasználásával.&#10;&#10;InitBoard és restartGame függvények paraméterezésével felxibilisebbé vált a program, bármikor indítható kívülről megadott játékoskezdéssel és táblamérettel." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: az inicializás funciójának csökkentése restartGame többszöri felhasználásával.&#10;&#10;InitBoard és restartGame függvények paraméterezésével felxibilisebbé vált a program, bármikor indítható kívülről megadott játékoskezdéssel és táblamérettel." />
   </component>
 </project>

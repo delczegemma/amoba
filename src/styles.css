@@ -5,6 +5,9 @@ body {
 h1 {
   text-align: center;
 }
+#app {
+  display: none;
+}
 
 .board {
   display: grid;
@@ -78,3 +81,4 @@ button {
 #reportMessage {
   text-align: center;
 }
+

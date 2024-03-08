@@ -11,45 +11,64 @@
   </head>
 
   <body>
+  <h1>Amőba Játék</h1>
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <form id="gameSettingsForm">
+          <label for="firstPlayer">Kezdő játékos:</label>
+          <select name="firstPlayer" id="firstPlayer">
+            <option value="X">X</option>
+            <option value="O">O</option>
+          </select><br><br>
+          <label for="winningLength">Nyertes sor hossza:</label>
+          <input type="number" name="winningLength" id="winningLength" value="4"><br><br>
+          <label for="boardSize">Tábla méret:</label>
+          <input type="number" name="boardSize" id="boardSize" value="6"><br><br>
+          <button type="submit">Játék indítása</button>
+        </form>
+    </div>
+  </div>
+
     <div id="app">
-      <h1>Amőba Játék</h1>
       <div id="board" class="board">
-        <div class="cell" cellIndexX="0" cellIndexY="0" data-next-move="X"></div>
-        <div class="cell" cellIndexX="0" cellIndexY="1" data-next-move="X"></div>
-        <div class="cell" cellIndexX="0" cellIndexY="2" data-next-move="X"></div>
-        <div class="cell" cellIndexX="0" cellIndexY="3" data-next-move="X"></div>
-        <div class="cell" cellIndexX="0" cellIndexY="4" data-next-move="X"></div>
-        <div class="cell" cellIndexX="0" cellIndexY="5" data-next-move="X"></div>
-        <div class="cell" cellIndexX="1" cellIndexY="0" data-next-move="X"></div>
-        <div class="cell" cellIndexX="1" cellIndexY="1" data-next-move="X"></div>
-        <div class="cell" cellIndexX="1" cellIndexY="2" data-next-move="X"></div>
-        <div class="cell" cellIndexX="1" cellIndexY="3" data-next-move="X"></div>
-        <div class="cell" cellIndexX="1" cellIndexY="4" data-next-move="X"></div>
-        <div class="cell" cellIndexX="1" cellIndexY="5" data-next-move="X"></div>
-        <div class="cell" cellIndexX="2" cellIndexY="0" data-next-move="X"></div>
-        <div class="cell" cellIndexX="2" cellIndexY="1" data-next-move="X"></div>
-        <div class="cell" cellIndexX="2" cellIndexY="2" data-next-move="X"></div>
-        <div class="cell" cellIndexX="2" cellIndexY="3" data-next-move="X"></div>
-        <div class="cell" cellIndexX="2" cellIndexY="4" data-next-move="X"></div>
-        <div class="cell" cellIndexX="2" cellIndexY="5" data-next-move="X"></div>
-        <div class="cell" cellIndexX="3" cellIndexY="0" data-next-move="X"></div>
-        <div class="cell" cellIndexX="3" cellIndexY="1" data-next-move="X"></div>
-        <div class="cell" cellIndexX="3" cellIndexY="2" data-next-move="X"></div>
-        <div class="cell" cellIndexX="3" cellIndexY="3" data-next-move="X"></div>
-        <div class="cell" cellIndexX="3" cellIndexY="4" data-next-move="X"></div>
-        <div class="cell" cellIndexX="3" cellIndexY="5" data-next-move="X"></div>
-        <div class="cell" cellIndexX="4" cellIndexY="0" data-next-move="X"></div>
-        <div class="cell" cellIndexX="4" cellIndexY="1" data-next-move="X"></div>
-        <div class="cell" cellIndexX="4" cellIndexY="2" data-next-move="X"></div>
-        <div class="cell" cellIndexX="4" cellIndexY="3" data-next-move="X"></div>
-        <div class="cell" cellIndexX="4" cellIndexY="4" data-next-move="X"></div>
-        <div class="cell" cellIndexX="4" cellIndexY="5" data-next-move="X"></div>
-        <div class="cell" cellIndexX="5" cellIndexY="0" data-next-move="X"></div>
-        <div class="cell" cellIndexX="5" cellIndexY="1" data-next-move="X"></div>
-        <div class="cell" cellIndexX="5" cellIndexY="2" data-next-move="X"></div>
-        <div class="cell" cellIndexX="5" cellIndexY="3" data-next-move="X"></div>
-        <div class="cell" cellIndexX="5" cellIndexY="4" data-next-move="X"></div>
-        <div class="cell" cellIndexX="5" cellIndexY="5" data-next-move="X"></div>
+        <div class="cell" cellIndexX="0" cellIndexY="0" ></div>
+        <div class="cell" cellIndexX="0" cellIndexY="1" ></div>
+        <div class="cell" cellIndexX="0" cellIndexY="2" ></div>
+        <div class="cell" cellIndexX="0" cellIndexY="3" ></div>
+        <div class="cell" cellIndexX="0" cellIndexY="4" ></div>
+        <div class="cell" cellIndexX="0" cellIndexY="5" ></div>
+        <div class="cell" cellIndexX="1" cellIndexY="0" ></div>
+        <div class="cell" cellIndexX="1" cellIndexY="1" ></div>
+        <div class="cell" cellIndexX="1" cellIndexY="2" ></div>
+        <div class="cell" cellIndexX="1" cellIndexY="3" ></div>
+        <div class="cell" cellIndexX="1" cellIndexY="4" ></div>
+        <div class="cell" cellIndexX="1" cellIndexY="5" ></div>
+        <div class="cell" cellIndexX="2" cellIndexY="0" ></div>
+        <div class="cell" cellIndexX="2" cellIndexY="1" ></div>
+        <div class="cell" cellIndexX="2" cellIndexY="2" ></div>
+        <div class="cell" cellIndexX="2" cellIndexY="3" ></div>
+        <div class="cell" cellIndexX="2" cellIndexY="4" ></div>
+        <div class="cell" cellIndexX="2" cellIndexY="5" ></div>
+        <div class="cell" cellIndexX="3" cellIndexY="0" ></div>
+        <div class="cell" cellIndexX="3" cellIndexY="1" ></div>
+        <div class="cell" cellIndexX="3" cellIndexY="2" ></div>
+        <div class="cell" cellIndexX="3" cellIndexY="3" ></div>
+        <div class="cell" cellIndexX="3" cellIndexY="4" ></div>
+        <div class="cell" cellIndexX="3" cellIndexY="5" ></div>
+        <div class="cell" cellIndexX="4" cellIndexY="0" ></div>
+        <div class="cell" cellIndexX="4" cellIndexY="1" ></div>
+        <div class="cell" cellIndexX="4" cellIndexY="2" ></div>
+        <div class="cell" cellIndexX="4" cellIndexY="3" ></div>
+        <div class="cell" cellIndexX="4" cellIndexY="4" ></div>
+        <div class="cell" cellIndexX="4" cellIndexY="5" ></div>
+        <div class="cell" cellIndexX="5" cellIndexY="0" ></div>
+        <div class="cell" cellIndexX="5" cellIndexY="1" ></div>
+        <div class="cell" cellIndexX="5" cellIndexY="2" ></div>
+        <div class="cell" cellIndexX="5" cellIndexY="3" ></div>
+        <div class="cell" cellIndexX="5" cellIndexY="4" ></div>
+        <div class="cell" cellIndexX="5" cellIndexY="5" ></div>
       </div>
       <h2 id="reportMessage"></h2>
       <button id="restartBtn">Új játék</button>
