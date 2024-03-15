@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="feat: Győztes hossz kiírtaása játék közben.">
+    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="refactor: Switchplayer felelősségi köre a táblára terjed.&#10;&#10;Felesleges elemek törlése, stílus a felxbox felé.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +95,11 @@
       <workItem from="1709297769309" duration="7977000" />
       <workItem from="1709677904950" duration="12331000" />
       <workItem from="1709903087516" duration="6696000" />
-      <workItem from="1709931462585" duration="384000" />
+      <workItem from="1709931462585" duration="565000" />
+      <workItem from="1709932442351" duration="1201000" />
+      <workItem from="1710246808446" duration="595000" />
+      <workItem from="1710282471418" duration="809000" />
+      <workItem from="1710537268411" duration="4372000" />
     </task>
     <task id="LOCAL-00001" summary="hat táblás verzió">
       <option name="closed" value="true" />
@@ -162,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709905243656</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor: Switchplayer felelősségi köre a táblára terjed.&#10;&#10;Felesleges elemek törlése, stílus a felxbox felé.">
+      <option name="closed" value="true" />
+      <created>1709932019723</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709932019723</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +199,7 @@
     <MESSAGE value="refactor: az inicializás funciójának csökkentése restartGame többszöri felhasználásával.&#10;&#10;InitBoard és restartGame függvények paraméterezésével felxibilisebbé vált a program, bármikor indítható kívülről megadott játékoskezdéssel és táblamérettel." />
     <MESSAGE value="feat: Modal beépítése a jáékba.&#10;&#10;A nyerő hosszat és a kezdő játékost ezentúl a játékos állíthatja be. Kezőlapként a beállítások tűnnek fel, majd az adatok bekérése után eltűnik a modal és a játéktér jelenik meg." />
     <MESSAGE value="feat: Győztes hossz kiírtaása játék közben." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Győztes hossz kiírtaása játék közben." />
+    <MESSAGE value="refactor: Switchplayer felelősségi köre a táblára terjed.&#10;&#10;Felesleges elemek törlése, stílus a felxbox felé." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Switchplayer felelősségi köre a táblára terjed.&#10;&#10;Felesleges elemek törlése, stílus a felxbox felé." />
   </component>
 </project>
