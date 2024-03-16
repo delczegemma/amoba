@@ -39,8 +39,9 @@ export class Game {
         //A táblán lévő cellára filled classt rak
         //CheckWin
         const winDirections= this.evaluator.checkWin(row, col, this.winningLength )
+        console.log("windirections tömb: " + winDirections)
         if (winDirections){
-            const winningCoordinates = this.evaluator.getWinningCells(row, col, this.player, ...winDirections);
+            const winningCoordinates = this.evaluator.getWinningCells(row, col, ...winDirections);
             this.highlightWinLine(winningCoordinates)
             this.gameOver();
             this.message.textContent = `Az ${this.player} játékos nyert! Gratulálunk!`

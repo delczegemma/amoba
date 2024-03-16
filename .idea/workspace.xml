@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="refactor: Evaluator osztály készítése azonos funkciójú függvényekből.">
-      <change afterPath="$PROJECT_DIR$/src/js/evaluator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/game.js" afterDir="false" />
+    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="refactor: Osztályok és fő app külön fájlokba rendezése.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/evaluator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/evaluator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/game.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "delczegemma"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c6942ebf-8b59-4bae-9283-f861b4b0f261" />
+        <option name="url" value="https://github.com/delczegemma/amoba.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -115,7 +127,7 @@
       <workItem from="1709932442351" duration="1201000" />
       <workItem from="1710246808446" duration="595000" />
       <workItem from="1710282471418" duration="809000" />
-      <workItem from="1710537268411" duration="6155000" />
+      <workItem from="1710537268411" duration="10393000" />
     </task>
     <task id="LOCAL-00001" summary="hat táblás verzió">
       <option name="closed" value="true" />
@@ -197,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710542370293</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="refactor: Osztályok és fő app külön fájlokba rendezése.">
+      <option name="closed" value="true" />
+      <created>1710543799541</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710543799541</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +245,7 @@
     <MESSAGE value="feat: Győztes hossz kiírtaása játék közben." />
     <MESSAGE value="refactor: Switchplayer felelősségi köre a táblára terjed.&#10;&#10;Felesleges elemek törlése, stílus a felxbox felé." />
     <MESSAGE value="refactor: Evaluator osztály készítése azonos funkciójú függvényekből." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Evaluator osztály készítése azonos funkciójú függvényekből." />
+    <MESSAGE value="refactor: Osztályok és fő app külön fájlokba rendezése." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Osztályok és fő app külön fájlokba rendezése." />
   </component>
 </project>

@@ -1,15 +1,12 @@
 // Importálás
 import { Game } from './game.js';
 
-
 //Elemek kiválasztása
 const cells = document.querySelectorAll(".cell");
 const message = document.querySelector("#reportMessage");
 const restartBtn = document.querySelector("#restartBtn");
 
-
-
-
+//// ---- MODAL ----\\
 //Játék beállítása
 const MODAL = document.getElementById('myModal');
 const form = document.getElementById("gameSettingsForm");

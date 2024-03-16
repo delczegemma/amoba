@@ -5,10 +5,10 @@ export class Evaluator {
     checkDirection(
         row,
         column,
-        PlayerSymbol,
         rowChange,
         colChange
     ) {
+        const PlayerSymbol = this.board[row][column]
         let difference = 1;
         console.log(`CheckDirection függvény: `) //esetleg még paraméterek kiíratása plusszba
         while (
@@ -35,22 +35,21 @@ export class Evaluator {
     }
 
     checkWin(row, column, winningLength) {
-        const PlayerSymbol = this.board[row][column];
         const rowLength =
-            this.checkDirection(row, column, PlayerSymbol, 0, 1) +
-            this.checkDirection(row, column, PlayerSymbol, 0, -1) +
+            this.checkDirection(row, column,0, 1) +
+            this.checkDirection(row, column,0, -1) +
             1;
         const columnLength =
-            this.checkDirection(row, column, PlayerSymbol, 1, 0) +
-            this.checkDirection(row, column, PlayerSymbol, -1, 0) +
+            this.checkDirection(row, column,1, 0) +
+            this.checkDirection(row, column,-1, 0) +
             1;
         const mDiagonalLength =
-            this.checkDirection(row, column, PlayerSymbol, 1, 1) +
-            this.checkDirection(row, column, PlayerSymbol, -1, -1) +
+            this.checkDirection(row, column,1, 1) +
+            this.checkDirection(row, column,-1, -1) +
             1;
         const oppDiagonalLength =
-            this.checkDirection(row, column, PlayerSymbol, 1, -1) +
-            this.checkDirection(row, column, PlayerSymbol, -1, 1) +
+            this.checkDirection(row, column,1, -1) +
+            this.checkDirection(row, column,-1, 1) +
             1;
         console.log(`Checkwin függvény 
       sora: ${rowLength},oszlopa: ${columnLength},főátló: ${mDiagonalLength},ellenátló: ${oppDiagonalLength} `)
@@ -69,8 +68,9 @@ export class Evaluator {
         }
     }
 
-    getWinningCells(row, column, PlayerSymbol, rowC1, rowC2, colC1, colC2) {
+    getWinningCells(row, column, rowC1, rowC2, colC1, colC2) {
         const winningCells = [];
+        const PlayerSymbol = this.board[row][column]
         let x = row;
         let y = column;
         const withinBorders = (x, y) => x >= 0 && y >= 0 && x < this.board.length && y < this.board[0].length;
