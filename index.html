@@ -12,24 +12,27 @@
 
   <body>
   <h1>Amőba Játék</h1>
-  <!-- Modal -->
-  <div id="myModal" class="modal">
-    <!-- Modal content-->
-    <div class="modal-content">
-        <form id="gameSettingsForm">
-          <label for="firstPlayer">Kezdő játékos:</label>
-          <select name="firstPlayer" id="firstPlayer">
-            <option value="X">X</option>
-            <option value="O">O</option>
-          </select><br><br>
-          <label for="winningLength">Nyertes sor hossza:</label>
-          <input type="number" name="winningLength" id="winningLength" value="4"><br><br>
-          <label for="boardSize">Tábla méret:</label>
-          <input type="number" name="boardSize" id="boardSize" value="6"><br><br>
-          <button type="submit">Játék indítása</button>
-        </form>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="question">
+          <h2>Kezdő játékos:</h2>
+          <button class="player-option next-btn" value="X">X</button>
+          <button class="player-option next-btn" value="O">O</button>
+        </div>
+        <div class="question">
+          <h2>Nyerő sor hossza:</h2>
+          <label for="winning-length">
+            <input type="range" name="winningLength" id="winning-length" min="3" max="10" value="4" class="slider">
+          </label>
+            <p id="slider-value">4</p>
+          <button class="next-btn winning-length-option">Tovább</button>
+        </div>
+        <div class="question">
+          <h2>A tábla mérete:</h2>
+          <button class="board-size-btn exit-btn" value="6">6x6</button>
+        </div>
+      </div>
     </div>
-  </div>
 
     <div id="app" class="flex-container">
       <div id="board" class="board">

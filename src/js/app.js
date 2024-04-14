@@ -8,33 +8,75 @@ const restartBtn = document.querySelector("#restartBtn");
 
 //// ---- MODAL ----\\
 //Játék beállítása
-const MODAL = document.getElementById('myModal');
-const form = document.getElementById("gameSettingsForm");
-form.addEventListener("submit", function(event) {
-  // Űrlap elküldésének megakadályozása
-  event.preventDefault();
-
-  // Beküldött adatok gyűjtése
-  const firstPlayer = document.getElementById("firstPlayer").value;
-  const winningLength = parseInt(document.getElementById("winningLength").value);
-  const boardSize = parseInt(document.getElementById("boardSize").value);
-
-  // Játék inicializálása a beküldött adatok alapján
-  const game = new Game(cells, message, restartBtn, firstPlayer, winningLength, boardSize);
+const MODAL = document.querySelector(".modal");
+const questions = document.querySelectorAll('.question');
+const playerOptions = document.querySelectorAll('.player-option');
+const winLengthOption = document.querySelector('.winning-length-option');
+const boardSizeOptions = document.querySelectorAll('.board-size-btn')
+const nextButtons = document.querySelectorAll('.next-btn');
+const exitButtons =document.querySelectorAll('.exit-btn');
 
 
-  // Modal bezárása
-  closeModal();
-  document.querySelector("#app").style.display = 'inline';
-  document.querySelector("#winningLengthInfo").innerText = winningLength;
-});
+let firstPlayer;
+let winningLength;
+let boardSize;
+let game;
 
-//beállításolal mutatása
-function setGame() {
-  MODAL.style.display = 'block';
+//winningLength dinamikus csuszkainfó
+let slider = document.getElementById("winning-length");
+let sliderValue = document.getElementById("slider-value");
+sliderValue.innerHTML = slider.value;
+
+slider.oninput = function() {
+  sliderValue.innerHTML = this.value;
 }
 
-// Modal bezárása
+  // Beküldött adatok gyűjtése //
+playerOptions.forEach((playerOp) => {
+    playerOp.addEventListener("click", () => {
+      firstPlayer = playerOp.value;
+    });
+});
+winLengthOption.addEventListener("click", () => {
+    winningLength = slider.value;
+});
+boardSizeOptions.forEach((bSizeOp) => {
+    bSizeOp.addEventListener("click", () => {
+        boardSize = bSizeOp.value;
+
+        // Játék inicializálása a beküldött adatok alapján
+        game = new Game(cells, message, restartBtn, firstPlayer, winningLength, boardSize);
+        // itt jó lesz a játékinicializálás?
+    });
+});
+
+    // Kérdések elúszása //
+let questionIndex = 1;
+nextButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        cardFly(questionIndex)
+        questionIndex++;
+    });
+});
+function cardFly(qIndex) {
+    questions.forEach((question) => {
+        question.style.transform = `translateX(-${qIndex * 100}%)`;
+    });
+}
+
+  // Modal bezárása //
+exitButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        closeModal();
+        document.querySelector("#app").style.display = 'inline';
+        document.querySelector("#winningLengthInfo").innerText = winningLength;
+    });
+});
+
+
+
 function closeModal() {
   MODAL.style.display = 'none';
 }
+
+//beállításolal mutatása

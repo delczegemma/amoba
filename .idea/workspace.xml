@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="refactor: Osztályok és fő app külön fájlokba rendezése.">
+    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="refactor: PlayerSmybol helyi változóvá alakítása checkDirection és getWinningCells metódusokban.&#10;&#10;Így csökken a paraméterek száma, mivel a már megkapott row/col argumentumokból ki lehet számolni.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/evaluator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/evaluator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +25,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "delczegemma"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;delczegemma&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -49,24 +50,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS VivoBook Pro 15/Documents/progarmozás/amőba&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
+    "Node.js.index.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/ASUS VivoBook Pro 15/Documents/progarmozás/epam/classes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS VivoBook Pro 15\Documents\progarmozás\amőba\src\js" />
@@ -127,7 +128,19 @@
       <workItem from="1709932442351" duration="1201000" />
       <workItem from="1710246808446" duration="595000" />
       <workItem from="1710282471418" duration="809000" />
-      <workItem from="1710537268411" duration="10393000" />
+      <workItem from="1710537268411" duration="11384000" />
+      <workItem from="1710946500687" duration="645000" />
+      <workItem from="1711106320117" duration="15199000" />
+      <workItem from="1711566123347" duration="107000" />
+      <workItem from="1711566240340" duration="4431000" />
+      <workItem from="1712234356848" duration="4105000" />
+      <workItem from="1712244935016" duration="11079000" />
+      <workItem from="1712526960616" duration="51000" />
+      <workItem from="1712531416496" duration="73000" />
+      <workItem from="1712532950518" duration="766000" />
+      <workItem from="1712573371197" duration="27000" />
+      <workItem from="1713092162595" duration="38000" />
+      <workItem from="1713092339100" duration="6195000" />
     </task>
     <task id="LOCAL-00001" summary="hat táblás verzió">
       <option name="closed" value="true" />
@@ -217,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710543799541</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor: PlayerSmybol helyi változóvá alakítása checkDirection és getWinningCells metódusokban.&#10;&#10;Így csökken a paraméterek száma, mivel a már megkapott row/col argumentumokból ki lehet számolni.">
+      <option name="closed" value="true" />
+      <created>1710548375590</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710548375590</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +267,7 @@
     <MESSAGE value="refactor: Switchplayer felelősségi köre a táblára terjed.&#10;&#10;Felesleges elemek törlése, stílus a felxbox felé." />
     <MESSAGE value="refactor: Evaluator osztály készítése azonos funkciójú függvényekből." />
     <MESSAGE value="refactor: Osztályok és fő app külön fájlokba rendezése." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Osztályok és fő app külön fájlokba rendezése." />
+    <MESSAGE value="refactor: PlayerSmybol helyi változóvá alakítása checkDirection és getWinningCells metódusokban.&#10;&#10;Így csökken a paraméterek száma, mivel a már megkapott row/col argumentumokból ki lehet számolni." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: PlayerSmybol helyi változóvá alakítása checkDirection és getWinningCells metódusokban.&#10;&#10;Így csökken a paraméterek száma, mivel a már megkapott row/col argumentumokból ki lehet számolni." />
   </component>
 </project>
