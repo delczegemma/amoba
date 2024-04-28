@@ -35,6 +35,11 @@ h1 {
   padding: 0 10% 0 10%;
   transition: 1s;
 }
+.btn-container{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 
 /*** JÁTÉKTÁBLA  ***/
@@ -132,3 +137,39 @@ button {
   text-align: center;
 }
 
+
+
+/* CSS */
+.next-btn {
+  align-self: center;
+  background-color: #57baac;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #f1ebd5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  padding: .75rem;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  touch-action: manipulation;
+}
+
+.next-btn:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.next-btn:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}

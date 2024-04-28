@@ -77,6 +77,7 @@ export class Game {
     }
     restartGame(player, cellsLength) {
         this.board = this.initBoard(cellsLength);
+        this.evaluator = new Evaluator(this.board);
         this.player = player;
         //esetleg if ide
         this.message.textContent = "";
@@ -85,6 +86,7 @@ export class Game {
             cell.classList.remove('winner-cell');
             cell.textContent = ""
         })
+        console.log(cellsLength)
     }
     highlightWinLine(coordinates){
         coordinates.forEach(({ x, y }) => {

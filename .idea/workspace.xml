@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="refactor: PlayerSmybol helyi változóvá alakítása checkDirection és getWinningCells metódusokban.&#10;&#10;Így csökken a paraméterek száma, mivel a már megkapott row/col argumentumokból ki lehet számolni.">
+    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="feat: Carousel-kérdések implementálása.&#10;&#10;A bekért értékek nem űrlapon, hanem gomb opciókat kiválasztva történnek a jobb felhasználói élmény érdekében.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,24 +51,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.index.html.executor": "Run",
-    "Node.js.index.js.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ASUS VivoBook Pro 15/Documents/progarmozás/epam/classes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS VivoBook Pro 15/Documents/progarmozás/epam/classes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS VivoBook Pro 15\Documents\progarmozás\amőba\src\js" />
@@ -140,7 +141,8 @@
       <workItem from="1712532950518" duration="766000" />
       <workItem from="1712573371197" duration="27000" />
       <workItem from="1713092162595" duration="38000" />
-      <workItem from="1713092339100" duration="6195000" />
+      <workItem from="1713092339100" duration="8472000" />
+      <workItem from="1713528031179" duration="7132000" />
     </task>
     <task id="LOCAL-00001" summary="hat táblás verzió">
       <option name="closed" value="true" />
@@ -238,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710548375590</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: Carousel-kérdések implementálása.&#10;&#10;A bekért értékek nem űrlapon, hanem gomb opciókat kiválasztva történnek a jobb felhasználói élmény érdekében.">
+      <option name="closed" value="true" />
+      <created>1713098814026</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713098814026</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +278,7 @@
     <MESSAGE value="refactor: Evaluator osztály készítése azonos funkciójú függvényekből." />
     <MESSAGE value="refactor: Osztályok és fő app külön fájlokba rendezése." />
     <MESSAGE value="refactor: PlayerSmybol helyi változóvá alakítása checkDirection és getWinningCells metódusokban.&#10;&#10;Így csökken a paraméterek száma, mivel a már megkapott row/col argumentumokból ki lehet számolni." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: PlayerSmybol helyi változóvá alakítása checkDirection és getWinningCells metódusokban.&#10;&#10;Így csökken a paraméterek száma, mivel a már megkapott row/col argumentumokból ki lehet számolni." />
+    <MESSAGE value="feat: Carousel-kérdések implementálása.&#10;&#10;A bekért értékek nem űrlapon, hanem gomb opciókat kiválasztva történnek a jobb felhasználói élmény érdekében." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Carousel-kérdések implementálása.&#10;&#10;A bekért értékek nem űrlapon, hanem gomb opciókat kiválasztva történnek a jobb felhasználói élmény érdekében." />
   </component>
 </project>

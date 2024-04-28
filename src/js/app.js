@@ -7,7 +7,7 @@ const message = document.querySelector("#reportMessage");
 const restartBtn = document.querySelector("#restartBtn");
 
 //// ---- MODAL ----\\
-//Játék beállítása
+        ///-- Játék beállítása --\\\
 const MODAL = document.querySelector(".modal");
 const questions = document.querySelectorAll('.question');
 const playerOptions = document.querySelectorAll('.player-option');
@@ -16,11 +16,18 @@ const boardSizeOptions = document.querySelectorAll('.board-size-btn')
 const nextButtons = document.querySelectorAll('.next-btn');
 const exitButtons =document.querySelectorAll('.exit-btn');
 
-
 let firstPlayer;
 let winningLength;
 let boardSize;
 let game;
+
+
+  // Beküldött adatok gyűjtése \\
+playerOptions.forEach((playerOp) => {
+    playerOp.addEventListener("click", () => {
+      firstPlayer = playerOp.value;
+    });
+});
 
 //winningLength dinamikus csuszkainfó
 let slider = document.getElementById("winning-length");
@@ -28,15 +35,8 @@ let sliderValue = document.getElementById("slider-value");
 sliderValue.innerHTML = slider.value;
 
 slider.oninput = function() {
-  sliderValue.innerHTML = this.value;
+    sliderValue.innerHTML = this.value;
 }
-
-  // Beküldött adatok gyűjtése //
-playerOptions.forEach((playerOp) => {
-    playerOp.addEventListener("click", () => {
-      firstPlayer = playerOp.value;
-    });
-});
 winLengthOption.addEventListener("click", () => {
     winningLength = slider.value;
 });
@@ -50,7 +50,9 @@ boardSizeOptions.forEach((bSizeOp) => {
     });
 });
 
-    // Kérdések elúszása //
+
+
+    // Kérdések elúszása \\
 let questionIndex = 1;
 nextButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -64,7 +66,7 @@ function cardFly(qIndex) {
     });
 }
 
-  // Modal bezárása //
+  // Modal bezárása \\
 exitButtons.forEach((button) => {
     button.addEventListener("click", () => {
         closeModal();
@@ -72,11 +74,7 @@ exitButtons.forEach((button) => {
         document.querySelector("#winningLengthInfo").innerText = winningLength;
     });
 });
-
-
-
 function closeModal() {
   MODAL.style.display = 'none';
 }
 
-//beállításolal mutatása
