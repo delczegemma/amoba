@@ -37,7 +37,8 @@ h1 {
 }
 .btn-container{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-right: 15%;
 }
 
 
@@ -126,8 +127,6 @@ h1 {
 }
 
 button {
-  display: block;
-  margin: 0 auto;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -140,9 +139,9 @@ button {
 
 
 /* CSS */
-.next-btn {
+.next-btn, .exit-btn {
   align-self: center;
-  background-color: #57baac;
+  background-color: #87ACE4;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
@@ -150,13 +149,12 @@ button {
   border-width: 2px;
   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
   box-sizing: border-box;
-  color: #f1ebd5;
+  color: #F3EADA;
   cursor: pointer;
   display: inline-block;
   font-family: Neucha, sans-serif;
   font-size: 1rem;
   line-height: 23px;
-  padding: .75rem;
   transition: all 235ms ease-in-out;
   border-bottom-left-radius: 15px 255px;
   border-bottom-right-radius: 225px 15px;
@@ -172,4 +170,19 @@ button {
 
 .next-btn:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+button[value="X"] {
+  background-color: #57baac;
+  color: #f1ebd5;
+}
+
+button[value="O"] {
+  background-color: #f1ebd5;
+  color: #57baac;
+}
+
+button[value="6"] {
+  background-color: #EA8E68;
+  color: #FFF5EE;
 }

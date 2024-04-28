@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="feat: Carousel-kérdések implementálása.&#10;&#10;A bekért értékek nem űrlapon, hanem gomb opciókat kiválasztva történnek a jobb felhasználói élmény érdekében.">
+    <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="fix: Új játék indítása helyen működik.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +140,7 @@
       <workItem from="1713092162595" duration="38000" />
       <workItem from="1713092339100" duration="8472000" />
       <workItem from="1713528031179" duration="7132000" />
+      <workItem from="1714315637522" duration="4124000" />
     </task>
     <task id="LOCAL-00001" summary="hat táblás verzió">
       <option name="closed" value="true" />
@@ -248,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713098814026</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: Új játék indítása helyen működik.">
+      <option name="closed" value="true" />
+      <created>1714315739343</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714315739343</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +285,7 @@
     <MESSAGE value="refactor: Osztályok és fő app külön fájlokba rendezése." />
     <MESSAGE value="refactor: PlayerSmybol helyi változóvá alakítása checkDirection és getWinningCells metódusokban.&#10;&#10;Így csökken a paraméterek száma, mivel a már megkapott row/col argumentumokból ki lehet számolni." />
     <MESSAGE value="feat: Carousel-kérdések implementálása.&#10;&#10;A bekért értékek nem űrlapon, hanem gomb opciókat kiválasztva történnek a jobb felhasználói élmény érdekében." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Carousel-kérdések implementálása.&#10;&#10;A bekért értékek nem űrlapon, hanem gomb opciókat kiválasztva történnek a jobb felhasználói élmény érdekében." />
+    <MESSAGE value="fix: Új játék indítása helyen működik." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Új játék indítása helyen működik." />
   </component>
 </project>
