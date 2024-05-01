@@ -69,12 +69,16 @@ function cardFly(qIndex) {
   // Modal bezárása \\
 exitButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        closeModal();
-        document.querySelector("#app").style.display = 'inline';
-        document.querySelector("#winningLengthInfo").innerText = winningLength;
+        MODAL.style.opacity = 0;
+        MODAL.style.transition = 'opacity 0.8s ease-in-out;';
+        setTimeout(() => {
+            closeModal();
+            document.querySelector("#app").style.display = 'inline';
+            document.querySelector("#winningLengthInfo").innerText = winningLength;
+        }, 800);
     });
 });
 function closeModal() {
-  MODAL.style.display = 'none';
+    MODAL.style.display = 'none';
 }
 

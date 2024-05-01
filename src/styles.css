@@ -15,6 +15,7 @@ h1 {
   height: 100%;
   background-color: #ffffff4d;
   z-index: 1;
+  transition: opacity .15s linear;
 }
 
 .modal-content {
@@ -72,6 +73,17 @@ h1 {
   flex-grow: 1;
 }
 
+/* Vonalkák megrjazolása animáció */
+
+@keyframes draw {
+  0% {
+    border-width: 0;
+  }
+  100% {
+    border-width: 1px;
+    border-color: #ccc;
+  }
+}
 .cell {
   width: 70px;
   height: 70px;
@@ -80,7 +92,9 @@ h1 {
   justify-content: center;
   font-family: 'Finger Paint', sans-serif;
   font-size: 75px;
-  border: 1px solid #ccc;
+  border: 1px solid transparent;
+  overflow: hidden;
+  animation: draw 0.5s forwards;
   cursor: pointer;
 }
 
