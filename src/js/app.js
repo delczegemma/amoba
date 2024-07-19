@@ -2,7 +2,7 @@
 import { Game } from './game.js';
 
 //Elemek kiválasztása
-const cells = document.querySelectorAll(".cell");
+
 const message = document.querySelector("#reportMessage");
 const restartBtn = document.querySelector("#restartBtn");
 
@@ -14,7 +14,7 @@ const playerOptions = document.querySelectorAll('.player-option');
 const winLengthOption = document.querySelector('.winning-length-option');
 const boardSizeOptions = document.querySelectorAll('.board-size-btn')
 const nextButtons = document.querySelectorAll('.next-btn');
-const exitButtons =document.querySelectorAll('.exit-btn');
+const exitButtons = document.querySelectorAll('.exit-btn');
 
 let firstPlayer;
 let winningLength;
@@ -40,15 +40,55 @@ slider.oninput = function() {
 winLengthOption.addEventListener("click", () => {
     winningLength = slider.value;
 });
+
+// Tábla generálása dinamikusan
+function generateBoard(size) {
+    const board = document.getElementById('board');
+    board.innerHTML = ''; // Tábla törlése
+    board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+
+    const boardMaxWidth = 70 * size;
+    board.style.maxWidth = `${boardMaxWidth}px`;
+
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.setAttribute('cellIndexX', i);
+            cell.setAttribute('cellIndexY', j);
+
+            // Eltávolítjuk a bordereket a tábla szélein
+            if (i === 0) {
+                cell.style.borderTop = 'none';
+            }
+            if (i === size - 1) {
+                cell.style.borderBottom = 'none';
+            }
+            if (j === 0) {
+                cell.style.borderLeft = 'none';
+            }
+            if (j === size - 1) {
+                cell.style.borderRight = 'none';
+            }
+
+            board.appendChild(cell);
+        }
+    }
+}
 boardSizeOptions.forEach((bSizeOp) => {
     bSizeOp.addEventListener("click", () => {
         boardSize = bSizeOp.value;
 
+        generateBoard(boardSize);
+        const cells = document.querySelectorAll(".cell");
         // Játék inicializálása a beküldött adatok alapján
         game = new Game(cells, message, restartBtn, firstPlayer, winningLength, boardSize);
-        // itt jó lesz a játékinicializálás?
+
+
+
     });
 });
+
 
 
 
