@@ -24,58 +24,25 @@
         <div class="question">
           <h2>Nyerő sor hossza:</h2>
           <label for="winning-length">
-            <input type="range" name="winningLength" id="winning-length" min="3" max="10" value="4" class="slider">
+            <input type="range" name="winningLength" id="winning-length" min="3" max="10" value="3" class="slider">
           </label>
-            <p id="slider-value">4</p>
+            <p id="slider-value">3</p>
           <button class="next-btn winning-length-option">Tovább</button>
         </div>
         <div class="question">
           <h2>A tábla mérete:</h2>
-          <button class="board-size-btn next-btn exit-btn" value="3">3x3</button>
-          <button class="board-size-btn next-btn exit-btn" value="4">4x4</button>
-          <button class="board-size-btn next-btn exit-btn" value="6">6x6</button>
+          <div class="btn-container">
+            <button class="board-size-btn next-btn exit-btn" value="3">3x3</button>
+            <button class="board-size-btn next-btn exit-btn" value="4">4x4</button>
+            <button class="board-size-btn next-btn exit-btn" value="6">6x6</button>
+          </div>
+
         </div>
       </div>
     </div>
 
     <div id="app" class="flex-container">
       <div id="board" class="board">
-        <<!--<div class="cell" cellIndexX="0" cellIndexY="0" ></div>
-        <div class="cell" cellIndexX="0" cellIndexY="1" ></div>
-        <div class="cell" cellIndexX="0" cellIndexY="2" ></div>
-        <div class="cell" cellIndexX="0" cellIndexY="3" ></div>
-        <div class="cell" cellIndexX="0" cellIndexY="4" ></div>
-        <div class="cell" cellIndexX="0" cellIndexY="5" ></div>
-        <div class="cell" cellIndexX="1" cellIndexY="0" ></div>
-        <div class="cell" cellIndexX="1" cellIndexY="1" ></div>
-        <div class="cell" cellIndexX="1" cellIndexY="2" ></div>
-        <div class="cell" cellIndexX="1" cellIndexY="3" ></div>
-        <div class="cell" cellIndexX="1" cellIndexY="4" ></div>
-        <div class="cell" cellIndexX="1" cellIndexY="5" ></div>
-        <div class="cell" cellIndexX="2" cellIndexY="0" ></div>
-        <div class="cell" cellIndexX="2" cellIndexY="1" ></div>
-        <div class="cell" cellIndexX="2" cellIndexY="2" ></div>
-        <div class="cell" cellIndexX="2" cellIndexY="3" ></div>
-        <div class="cell" cellIndexX="2" cellIndexY="4" ></div>
-        <div class="cell" cellIndexX="2" cellIndexY="5" ></div>
-        <div class="cell" cellIndexX="3" cellIndexY="0" ></div>
-        <div class="cell" cellIndexX="3" cellIndexY="1" ></div>
-        <div class="cell" cellIndexX="3" cellIndexY="2" ></div>
-        <div class="cell" cellIndexX="3" cellIndexY="3" ></div>
-        <div class="cell" cellIndexX="3" cellIndexY="4" ></div>
-        <div class="cell" cellIndexX="3" cellIndexY="5" ></div>
-        <div class="cell" cellIndexX="4" cellIndexY="0" ></div>
-        <div class="cell" cellIndexX="4" cellIndexY="1" ></div>
-        <div class="cell" cellIndexX="4" cellIndexY="2" ></div>
-        <div class="cell" cellIndexX="4" cellIndexY="3" ></div>
-        <div class="cell" cellIndexX="4" cellIndexY="4" ></div>
-        <div class="cell" cellIndexX="4" cellIndexY="5" ></div>
-        <div class="cell" cellIndexX="5" cellIndexY="0" ></div>
-        <div class="cell" cellIndexX="5" cellIndexY="1" ></div>
-        <div class="cell" cellIndexX="5" cellIndexY="2" ></div>
-        <div class="cell" cellIndexX="5" cellIndexY="3" ></div>
-        <div class="cell" cellIndexX="5" cellIndexY="4" ></div>
-        <div class="cell" cellIndexX="5" cellIndexY="5" ></div> -->
       </div>
       <div class="info-section">
         <div class="infobox">

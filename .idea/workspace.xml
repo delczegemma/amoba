@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7de22ad3-6476-400e-9455-64b895fe7282" name="Changes" comment="style: Modal bezárása transitiönnel.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS VivoBook Pro 15/Documents/progarmozás/epam/Angular/angular-fundamentals-template-rxjs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS VivoBook Pro 15/Documents/progarmozás/amőba&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -146,6 +149,8 @@
       <workItem from="1719578988164" duration="2205000" />
       <workItem from="1719661391037" duration="183000" />
       <workItem from="1721237480912" duration="1351000" />
+      <workItem from="1721341301772" duration="6028000" />
+      <workItem from="1721382736489" duration="4156000" />
     </task>
     <task id="LOCAL-00001" summary="hat táblás verzió">
       <option name="closed" value="true" />
@@ -275,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714573901623</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="style: Modal bezárása transitiönnel.">
+      <option name="closed" value="true" />
+      <created>1721341435822</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1721341435822</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

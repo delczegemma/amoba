@@ -50,24 +50,24 @@ function generateBoard(size) {
     const boardMaxWidth = 70 * size;
     board.style.maxWidth = `${boardMaxWidth}px`;
 
-    for (let i = 0; i < size; i++) {
-        for (let j = 0; j < size; j++) {
+    for (let row = 0; row < size; row++) {
+        for (let col = 0; col < size; col++) {
             const cell = document.createElement('div');
             cell.classList.add('cell');
-            cell.setAttribute('cellIndexX', i);
-            cell.setAttribute('cellIndexY', j);
+            cell.setAttribute('cellIndexX', row);
+            cell.setAttribute('cellIndexY', col);
 
             // Eltávolítjuk a bordereket a tábla szélein
-            if (i === 0) {
+            if (row === 0) {
                 cell.style.borderTop = 'none';
             }
-            if (i === size - 1) {
+            if (row === size - 1) {
                 cell.style.borderBottom = 'none';
             }
-            if (j === 0) {
+            if (col === 0) {
                 cell.style.borderLeft = 'none';
             }
-            if (j === size - 1) {
+            if (col === size - 1) {
                 cell.style.borderRight = 'none';
             }
 
@@ -79,12 +79,11 @@ boardSizeOptions.forEach((bSizeOp) => {
     bSizeOp.addEventListener("click", () => {
         boardSize = bSizeOp.value;
 
+        //itt ez jó helyen van?
         generateBoard(boardSize);
         const cells = document.querySelectorAll(".cell");
         // Játék inicializálása a beküldött adatok alapján
         game = new Game(cells, message, restartBtn, firstPlayer, winningLength, boardSize);
-
-
 
     });
 });

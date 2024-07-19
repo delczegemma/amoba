@@ -1,4 +1,4 @@
-body {
+* {
   font-family: "Permanent Marker", cursive;
 }
 
@@ -23,12 +23,19 @@ h1 {
   margin: 10% auto;
   padding: 6%;
   border: 1px solid #e5e7eb;
-  border-radius: .75rem;
+  /*border-radius: .75rem;*/
+  border-radius: 15px 225px 255px;
   width: 80%;
   height: 30%;
   max-width: 400px;
   display: flex;
   overflow-x: hidden;
+  /* Trükkös border beállítása */
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  /*box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;*/
 }
 .question {
   flex: 1 0 100%;
@@ -36,7 +43,7 @@ h1 {
   padding: 0 10% 0 10%;
   transition: 1s;
 }
-.btn-container{
+.btn-container {
   display: flex;
   justify-content: space-around;
   padding-right: 15%;
@@ -72,7 +79,7 @@ h1 {
   flex-grow: 1;
 }
 
-/* Vonalkák megrjazolása animáció */
+/* Vonalkák megrajzolása animáció */
 
 @keyframes draw {
   0% {
@@ -97,36 +104,7 @@ h1 {
   cursor: pointer;
 }
 
-/*a szélek eltüntetése: csak három táblára jó megoldás
-.cell:first-child,
-.cell:nth-child(2),
-.cell:nth-child(3),
-.cell:nth-child(4),
-.cell:nth-child(5),
-.cell:nth-child(6) {
-  border-top: none;
-}
 
-.cell:nth-child(6n+1) {
-  border-left: none;
-}
-
-.cell:nth-child(6n+6) {
-  border-right: none;
-}
-
-.cell.filled {
-  cursor: not-allowed;
-}
-
-.cell:last-child,
-.cell:nth-child(35),
-.cell:nth-child(34),
-.cell:nth-child(33),
-.cell:nth-child(32),
-.cell:nth-child(31){
-  border-bottom: none;
-}*/
 
  /*hover content következő lépést lépést*/
 
@@ -153,7 +131,7 @@ button {
 
 
 /* CSS */
-.next-btn {
+.next-btn, #restartBtn {
   align-self: center;
   background-color: #87ACE4;
   background-position: 0 90%;
@@ -165,8 +143,7 @@ button {
   box-sizing: border-box;
   color: #F3EADA;
   cursor: pointer;
-  display: inline-block;
-  font-family: Neucha, sans-serif;
+  /*display: inline-block;*/
   font-size: 1rem;
   line-height: 23px;
   transition: all 235ms ease-in-out;
