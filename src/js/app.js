@@ -16,6 +16,15 @@ const boardSizeOptions = document.querySelectorAll('.board-size-btn')
 const nextButtons = document.querySelectorAll('.next-btn');
 const exitButtons = document.querySelectorAll('.exit-btn');
 
+//Játékmód
+const gameModeButtons = document.querySelectorAll('.game-mode-btn');
+const startingPlayerQuestion = document.getElementById('startingPlayerQuestion');
+const robotOpponentTypeQuestion = document.getElementById('robotOpponentTypeQuestion');
+const robotSelectionQuestion = document.getElementById('robotSelectionQuestion');
+const robotOpponentTypeButtons = document.querySelectorAll('.robot-opponent-type-btn');
+const robotSelectionButtons = document.querySelectorAll('.robot-selection-btn');
+
+
 let firstPlayer;
 let winningLength;
 let boardSize;
@@ -78,13 +87,6 @@ function generateBoard(size) {
 boardSizeOptions.forEach((bSizeOp) => {
     bSizeOp.addEventListener("click", () => {
         boardSize = bSizeOp.value;
-
-        //itt ez jó helyen van?
-        generateBoard(boardSize);
-        const cells = document.querySelectorAll(".cell");
-        // Játék inicializálása a beküldött adatok alapján
-        game = new Game(cells, message, restartBtn, firstPlayer, winningLength, boardSize);
-
     });
 });
 
@@ -93,6 +95,41 @@ boardSizeOptions.forEach((bSizeOp) => {
 
     // Kérdések elúszása \\
 let questionIndex = 1;
+let gameMode;
+let opponentType;
+let selectedRobot;
+
+// Játékmód kiválasztása
+gameModeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        gameMode = button.value;
+
+        if (gameMode === 'human') {
+            robotOpponentTypeQuestion.style.display = 'none';
+            robotSelectionQuestion.style.display = 'none';
+        } else if (gameMode === 'robot') {
+            firstPlayer = "X";
+            startingPlayerQuestion.style.display = 'none';
+            robotOpponentTypeQuestion.style.display = 'flex';
+            robotSelectionQuestion.style.display = 'flex';
+        }
+        console.log("the game mode is" + gameMode);
+    });
+});
+
+// Robot ellenfél típusa
+robotOpponentTypeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        opponentType = button.value;
+    });
+});
+
+// Robot kiválasztása
+robotSelectionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        selectedRobot = button.value;
+    });
+});
 nextButtons.forEach((button) => {
     button.addEventListener("click", () => {
         cardFly(questionIndex)
@@ -112,9 +149,15 @@ exitButtons.forEach((button) => {
         MODAL.style.transition = 'opacity 0.8s ease-in-out;';
         setTimeout(() => {
             closeModal();
-            document.querySelector("#app").style.display = 'inline';
+            document.querySelector("#app").style.display = 'flex';
             document.querySelector("#winningLengthInfo").innerText = winningLength;
         }, 800);
+
+        //Nem volt jó helyen :D
+        generateBoard(boardSize);
+        const cells = document.querySelectorAll(".cell");
+        // Játék inicializálása a beküldött adatok alapján
+        game = new Game(cells, message, restartBtn, firstPlayer, winningLength, boardSize);
     });
 });
 function closeModal() {

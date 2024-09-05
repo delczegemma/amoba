@@ -35,6 +35,7 @@ export class Evaluator {
     }
 
     checkWin(row, column, winningLength) {
+        console.log("Csekkolom a győztest. A nyerő sor hossza: " + winningLength)
         const rowLength =
             this.checkDirection(row, column,0, 1) +
             this.checkDirection(row, column,0, -1) +

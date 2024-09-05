@@ -16,6 +16,10 @@ h1 {
   background-color: #ffffff4d;
   z-index: 1;
   transition: opacity .15s linear;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-content {
@@ -23,7 +27,6 @@ h1 {
   margin: 10% auto;
   padding: 6%;
   border: 1px solid #e5e7eb;
-  /*border-radius: .75rem;*/
   border-radius: 15px 225px 255px;
   width: 80%;
   height: 30%;
@@ -35,7 +38,6 @@ h1 {
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  /*box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;*/
 }
 .question {
   flex: 1 0 100%;
@@ -49,11 +51,30 @@ h1 {
   padding-right: 15%;
 }
 
+.board-size-container {
+  max-width: 75%;
+  max-height: 100%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-content: space-between;
+  gap: .70em;
+  flex-wrap: wrap;
+}
+
+.btn-container button {
+  box-sizing: border-box;
+}
+
+
 
 
 /*** JÁTÉKTÁBLA  ***/
 #app {
   display: none;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px; /* Térköz a tábla és az infó szekció között */
+  flex-wrap: wrap; /* Flex elemek becsomagolása, ha nem férnek el egy sorban */
 }
 
 .flex-container {
@@ -62,21 +83,53 @@ h1 {
 }
 
 .info-section {
-  margin-left: 20px; /* Táblától való eltolás */
-  flex-grow: 1;
+  flex-basis: 200px; /* Az infó szekció minimális szélessége */
 }
 
-.infobox {
+/*.infobox {
   text-align: center;
   position: relative;
   right: -160px
-}
+}*/
 
 .board {
   display: grid;
   gap: 0;
-  margin: 10px auto;
+  /*margin: 10px auto;*/
   flex-grow: 1;
+}
+
+/* Szűk képernyőn egymás alá helyezés */
+@media (max-width: 70vw) {
+  #app {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-section {
+    margin-top: 2vh;
+  }
+  .modal-content {
+    width: 90vw;
+    padding: 4%;
+    max-width: 90vw;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .board-size-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-container button,
+  .board-size-container button {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
 
 /* Vonalkák megrajzolása animáció */
@@ -134,6 +187,7 @@ button {
 .next-btn, #restartBtn {
   align-self: center;
   background-color: #87ACE4;
+  color: #F3EADA;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
@@ -141,7 +195,6 @@ button {
   border-width: 2px;
   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
   box-sizing: border-box;
-  color: #F3EADA;
   cursor: pointer;
   /*display: inline-block;*/
   font-size: 1rem;
@@ -154,6 +207,16 @@ button {
   touch-action: manipulation;
 }
 
+.next-btn.odd-blue {
+  background-color: #87ACE4;
+  color: #F3EADA;
+}
+
+.next-btn.even-blue {
+  background-color: #F3EADA;
+  color: #87ACE4;
+}
+
 .next-btn:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
@@ -163,21 +226,21 @@ button {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
-button[value="X"] {
+button.odd-green {
   background-color: #57baac;
   color: #f1ebd5;
 }
 
-button[value="O"] {
+button.even-green {
   background-color: #f1ebd5;
   color: #57baac;
 }
 
-button[value="6"], button[value="3"] {
+button[value="6"], button[value="3"],  button[value="10"] {
   background-color: #EA8E68;
   color: #FFF5EE;
 }
-button[value="4"] {
+button[value="4"], button[value="8"], button[value="20"] {
   background-color: #FFF5EE;
   color: #EA8E68;
 }

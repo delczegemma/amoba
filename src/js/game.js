@@ -22,7 +22,11 @@ export class Game {
             cell.addEventListener("click", () => this.makeMove(event));
         });
         this.restartBtn.addEventListener("click", () => this.restartGame(this.firstPlayer,this.cells.length));
+        let robotvalaszt =document.querySelector('[cellIndexX="0"][cellIndexY="0"]');
+        console.log(robotvalaszt);
+        robotvalaszt.click();
     }
+
     makeMove(event) {
         const cell = event.target;
         if (cell.classList.contains('filled')) {
